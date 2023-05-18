@@ -9,10 +9,6 @@ def generate_launch_description():
         ),
         Node(
             package='py_vision',
-            executable='webinar_demo',
-        ),
-        Node(
-            package='turtlesim',
-            executable='turtlesim_node',
+            executable='usbcam_subscriber',
         )
     ])

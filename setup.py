@@ -1,6 +1,6 @@
+from setuptools import setup
 import os
 from glob import glob
-from setuptools import setup
 
 package_name = 'py_vision'
 
@@ -25,7 +25,7 @@ setup(
         'console_scripts': [
             'usbcam_publisher = py_vision.usbcam_publisher:main',        
             'usbcam_subscriber = py_vision.usbcam_subscriber:main',        
-            'webinar_demo = py_vision.webinar_demo_member_function:main',                
+            'webinar_demo = py_vision.webinar_demo:main',                
         ],
     },
 )

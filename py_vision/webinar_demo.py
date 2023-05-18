@@ -76,10 +76,8 @@ class WebinarDemo(Node):
 
     def __init__(self):
         super().__init__('webinar_demo')
-        self.subscriber1_ = self.create_subscription(Image,'camera/image',self.listener_callback,10)
-        self.subscriber1_  # prevent unused variable warning
-        self.subscriber2_ = self.create_subscription(Image,'image_raw',self.listener_callback,10)
-        self.subscriber2_  # prevent unused variable warning
+        self.subscriber_ = self.create_subscription(Image,'image_raw',self.listener_callback,10)
+        self.subscriber_  # prevent unused variable warning
         self.publisher1 = self.create_publisher(Image, 'vision/asl', 10)
         self.publisher2 = self.create_publisher(Twist, 'turtle1/cmd_vel', 10)
         # Open ASL model
@@ -275,7 +273,7 @@ class WebinarDemo(Node):
         
         # DISPLAY
         cv2_bgr_image = cv2.cvtColor(cv2_image, cv2.COLOR_RGB2BGR)
-        cv2.imshow('vision13',cv2_bgr_image)
+        cv2.imshow('webinar_demo',cv2_bgr_image)
         cv2.waitKey(1)
 
         # CONVERT BACK TO ROS & PUBLISH
