@@ -1,6 +1,9 @@
 # py_vision
 ROS2 package for controlling robot with hand signs
 
+# Demo
+![](zu1_vision_webinar2_demo_take01.gif)
+
 # Webinar
 For more information on how this ROS2 graph was created, 
 please view the following webinar which provides a detailed description:
